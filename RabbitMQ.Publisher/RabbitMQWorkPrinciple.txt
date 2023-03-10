@@ -1,0 +1,21 @@
+-RabbitMq'yu docker olmadan webden kullanmak;
+ cloudamqp.com => create new instance
+ 
+ 
+PRATÝK;
+*RabbitMQ.Client kütüphanesini yükle. => nuget.org'tan
+*Nuget consola NuGet\Install-Package RabbitMQ.Client -Version 6.4.0
+(kütüphanemizi indirdik) publisher ve consumer için ayrý ayrý
+
+
+PUBLISHER UYGULAMASI ÝÞLEM SIRASI:
+1-) RabbitMQ Sunucusuna 'Baðlantý Olultur'
+2-) Baðlantýyý aktifleþtir ve kanal aç.
+3-) Mesajlarýn gönderileceði kuyruðu oluþtur
+4-) Kuyruða mesaj gönder
+
+
+1-)Baðlantý oluþturmak için önce factory sýnýfýný oluþtur. (Bu class Rabbitmq client libaryden gelir)
+2-)CloudAMQP' de oluþturduðum example instance'ýna baðlantý gerçekleþtiricem. Bu instance'ýn amqp detailsýndan url'i kopyalarým. (Bu sunucunun ampq protolüyle connection stringi)
+ConnectionFactory factory = new(); =>hangi sunucuya baðlanacaðýný factory instance'ýnda bildirmen gerekir.
+
